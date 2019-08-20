@@ -1,24 +1,13 @@
 {
-    "name": "laravel_crm/capsulecrm",
+    "name": "laravel/laravel",
     "description": "Laravel Package for capsule CRM integration",
-    "type": "library",
+    "type": "project",
     "keywords":["laravel","crm","capsulecrm","capsule","laravelcrm","capsule crm","laravel crm"],
-    "authors": [
-        {
-            "name": "Mostafa Mohammed",
-            "email": "mmohammed@arkdev.net"
-        },
-        {
-            "name": "Youssef Daood",
-            "email": "ydaood@arkdev.net"
-        }
-        
-    ],
     "require": {
         "php": ">=5.4.0",
         "guzzlehttp/guzzle": "~6.0"
     },
-    "autoload": {       
+    "autoload": {
         "psr-4": {
             "CapsuleCRM\\": "src/"
         },
