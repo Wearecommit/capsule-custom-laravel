@@ -1,0 +1,52 @@
+{
+    "name": "laravel_crm/capsulecrm",
+    "description": "Laravel Package for capsule CRM integration",
+    "type": "library",
+    "keywords":["laravel","crm","capsulecrm","capsule","laravelcrm","capsule crm","laravel crm"],
+    "authors": [
+        {
+            "name": "Mostafa Mohammed",
+            "email": "mmohammed@arkdev.net"
+        },
+        {
+            "name": "Youssef Daood",
+            "email": "ydaood@arkdev.net"
+        }
+        
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {       
+        "psr-4": {
+            "CapsuleCRM\\": "src/"
+        },
+        "files":[
+        "src/helper.php"
+        ]
+    },
+    "extra": {
+        "_comment":{
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        }
+        },
+        "laravel": {
+            "providers": [
+                "CapsuleCRM\\CapsuleServiceProvider"
+            ],
+            "aliases": {
+                "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+            }
+        }
+    },
+    "license":"MIT",
+    "scripts": {
+        "post-install-cmd": [
+          "php artisan vendor:publish --tag=capsuleCRM --force"
+        ],
+        "post-update-cmd": [
+        ]
+      }
+}
